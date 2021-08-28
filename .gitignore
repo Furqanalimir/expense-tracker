@@ -9,6 +9,7 @@ node_modules
 .pnp.js
 
 # testing
+/config/config.env
 /coverage
 
 # production
