@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, Fragment } from 'react';
 import { GlobalContext  } from '../context/GlobalState';
 
 import { Transaction } from './Transaction'
@@ -13,7 +13,7 @@ export const TransactionList = () => {
   }, [])
   
   return (
-    <>
+    <Fragment>
       <h3>History</h3>
       <ul  className="list">
       { transactions.map(transaction => (<Transaction key={transaction.id} 
@@ -21,6 +21,6 @@ export const TransactionList = () => {
           
       </ul>
 
-    </>
+    </Fragment>
   )
 }

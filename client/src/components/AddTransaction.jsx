@@ -1,4 +1,4 @@
-import React ,{ useState, useContext } from 'react';
+import React ,{ useState, useContext, Fragment } from 'react';
 import { GlobalContext  } from '../context/GlobalState';
 
 export const AddTransaction = () => {
@@ -21,7 +21,7 @@ export const AddTransaction = () => {
   }
 
   return (
-    <>
+    <Fragment>
       <h3>Add new transaction</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
@@ -29,6 +29,7 @@ export const AddTransaction = () => {
           <input type="text" value={text} onChange={(e)=>setText(e.target.value)} 
           placeholder="Enter text..." />
         </div>
+
         <div className="form-control">
           <label htmlFor="amount"
             >Amount <br />
@@ -39,6 +40,7 @@ export const AddTransaction = () => {
         </div>
         <button className="btn">Add transaction</button>
       </form>
-    </>
+      
+    </Fragment>
   )
 }
